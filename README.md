@@ -12,6 +12,8 @@ A Node.js web application demonstrating a complete DevOps workflow using GitHub 
 - Docker Hub
 
 ## Project Structure
+
+```
 devops-app/
 ├── .github/
 │   └── workflows/
@@ -24,6 +26,7 @@ devops-app/
 ├── package.json
 ├── .gitignore
 └── README.md
+```
 
 ## Steps to Run Locally
 
