@@ -13,11 +13,16 @@ A Node.js web application demonstrating a complete DevOps workflow using GitHub 
 
 ## Project Structure
 devops-app/
-├── src/
+├── .github/
+│   └── workflows/
+│       └── main.yml
 ├── tests/
+│   └── sum.test.js
 ├── Dockerfile
 ├── docker-compose.yml
-├── .github/workflows/
+├── index.js
+├── package.json
+├── .gitignore
 └── README.md
 
 ## Steps to Run Locally
