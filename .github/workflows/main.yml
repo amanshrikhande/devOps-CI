@@ -21,7 +21,10 @@ jobs:
         run: node_modules/.bin/jest
 
       - name: Build Docker Image
-        run: docker build -t devops-app .
+        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/devops-app .
 
-      - name: Run Docker Container
-        run: docker run -d -p 3000:3000 devops-app
+      - name: Login to Docker Hub
+        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+
+      - name: Push to Docker Hub
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/devops-app
